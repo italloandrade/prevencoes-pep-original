@@ -121,11 +121,14 @@ const styles = StyleSheet.create({
     fontSize: typography.fontSize.xs,
   },
   buttonRow: {
+    display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
     gap: spacing.sm,
   },
   buttonWrapper: {
-    flex: 1, // Garante que a View animada ocupe o espaço correto
+    flex: 1
   },
   button: {
     width: '100%',
@@ -136,10 +139,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'transparent',
     minHeight: 44,
+    maxWidth: 58,
   },
   buttonSelectedYes: {
     backgroundColor: colors.safe, // VERDE quando selecionado
     borderColor: colors.safe,
+    maxWidth: 58,
   },
   buttonSelectedNo: {
     backgroundColor: colors.alert, // VERMELHO quando selecionado

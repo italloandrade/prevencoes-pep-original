@@ -13,11 +13,6 @@ export const FootnoteCard: React.FC<FootnoteCardProps> = ({ references }) => {
 
   return (
     <View style={styles.container}>
-      {/* Cabeçalho com Ícone */}
-      <View style={styles.header}>
-        <Info size={16} color={colors.primary} />
-        <Text style={styles.title}>Notas de Referência</Text>
-      </View>
       
       {/* Lista de Notas */}
       <View style={styles.notesContainer}>
@@ -38,12 +33,9 @@ export const FootnoteCard: React.FC<FootnoteCardProps> = ({ references }) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.bg, // Fundo leve e neutro
     borderRadius: borderRadius.md,
     padding: spacing.base,
     marginTop: spacing.md,
-    borderLeftWidth: 4,
-    borderLeftColor: colors.primary, // Mantém a borda azul clássica de "Citação"
   },
   header: {
     flexDirection: 'row',
@@ -56,9 +48,7 @@ const styles = StyleSheet.create({
     color: colors.primary, // Azul para combinar com o ícone
     marginLeft: spacing.xs,
   },
-  notesContainer: {
-    paddingLeft: spacing.xs, // Dá um leve respiro em relação à borda esquerda
-  },
+
   note: {
     fontSize: typography.fontSize.xs, // Tamanho XS para não roubar a atenção
     fontFamily: typography.fontFamily.ui,

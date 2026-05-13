@@ -23,34 +23,16 @@ export const ResultCard: React.FC<ResultCardProps> = ({
     <View style={styles.container}>
       {/* Título com Ícone */}
       <View style={styles.header}>
-        <Activity color={colors.primary} size={20} />
         <Text style={styles.title}>{title}</Text>
       </View>
 
-      {/* Badge de Risco com Glow (Sombra Colorida) */}
-      <View 
-        style={[
-          styles.riskBadge, 
-          { 
-            backgroundColor: riskColor,
-            shadowColor: riskColor, // A sombra usa a cor do risco
-          }
-        ]}
-      >
-        <Text style={styles.riskText}>{riskText.toUpperCase()}</Text>
-      </View>
-
-      <View style={styles.divider} />
-
       {/* Caixa de Conduta (Estilo Prescrição) */}
       <View style={styles.treatmentBox}>
-        <Text style={styles.treatmentTitle}>Conduta Recomendada</Text>
 
         <View style={styles.treatmentList}>
           {treatment.map((item, index) => (
             <View key={index} style={styles.treatmentItem}>
               {/* Substituí a bolinha simples por um ícone de Check elegante */}
-              <CheckCircle2 color={colors.primary} size={18} style={styles.bulletIcon} />
               <Text style={styles.treatmentText}>{item}</Text>
             </View>
           ))}
@@ -62,10 +44,7 @@ export const ResultCard: React.FC<ResultCardProps> = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.surface, // Branco
-    borderRadius: borderRadius.lg,
     padding: spacing.lg,
-    ...shadows.lg, // Sombra um pouco maior para destacar o card principal
   },
   header: {
     flexDirection: 'row',
@@ -73,11 +52,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginBottom: spacing.base,
     gap: spacing.sm,
+    color: colors.primary
   },
   title: {
     fontSize: typography.fontSize.lg,
     fontFamily: typography.fontFamily.uiExtraBold,
-    color: colors.ink,
+    color: colors.primary,
   },
   riskBadge: {
     paddingVertical: spacing.sm,
@@ -104,11 +84,11 @@ const styles = StyleSheet.create({
     marginBottom: spacing.lg,
   },
   treatmentBox: {
-    backgroundColor: colors.bg, // Fundo levemente creme/cinza
-    borderRadius: borderRadius.md,
+    backgroundColor: colors.alert, 
     padding: spacing.base,
     borderWidth: 1,
     borderColor: colors.line,
+    borderRadius: borderRadius.lg
   },
   treatmentTitle: {
     fontSize: typography.fontSize.base,
@@ -131,7 +111,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontSize: typography.fontSize.base,
     fontFamily: typography.fontFamily.ui,
-    color: colors.ink,
+    color: colors.surface,
     lineHeight: typography.fontSize.base * typography.lineHeight.relaxed,
   },
 });

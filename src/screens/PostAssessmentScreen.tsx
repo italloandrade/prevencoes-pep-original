@@ -44,11 +44,11 @@ const PostAssessmentScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Stepper
+      {/* <Stepper
         currentStep={3}
         totalSteps={4}
         labels={['Pré-CPRE', 'Resultado Pré', 'Pós-CPRE', 'Resultado Final']}
-      />
+      /> */}
 
       <ScrollView
         style={styles.scrollView}
@@ -90,12 +90,6 @@ const PostAssessmentScreen: React.FC<Props> = ({ navigation }) => {
 
         <FootnoteCard references={footnoteRefs} />
 
-        {/* Contador de Progresso */}
-        <View style={styles.progressInfo}>
-          <Text style={styles.progressText}>
-            Respondidas: {Object.keys(answers).length} de {postAssessmentQuestions.length}
-          </Text>
-        </View>
       </ScrollView>
 
       <View style={styles.footer}>

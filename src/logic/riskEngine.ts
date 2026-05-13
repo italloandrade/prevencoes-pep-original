@@ -131,9 +131,9 @@ export const postAssessmentQuestions: Question[] = [
 // ============= NOTAS DE RODAPÉ =============
 
 export const footnotes = {
-  '¹': 'Paciente com idade ≤ 30 anos',
-  '²': 'Ducto hepato-colédoco ≤ 5 mm (♀) / ≤ 7 mm (♂)',
-  '³': 'Bilirrubina total ≤ 1,2 mg/dL',
+  '¹': 'Paciente com idade menor ou igual a 30 anos.',
+  '²': 'Ducto hepato-colédoco tendo diâmetro menor ou igual a 5 para sexo feminino e menor ou igual a 7 para sexo masculino.',
+  '³': 'Bilirrubina total menor ou igual a 1,2.',
   '*': 'Canulação difícil: ≥ 5 min para canulação ou > 5 tentativas',
   '**': 'Papilite ou fibrose de papila vistos em colangiorressonância prévia',
 };

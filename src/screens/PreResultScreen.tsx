@@ -27,7 +27,7 @@ const PreResultScreen: React.FC<Props> = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <Stepper
+      {/* <Stepper
         currentStep={2}
         totalSteps={result.shouldProceedToPost ? 4 : 2}
         labels={
@@ -35,7 +35,7 @@ const PreResultScreen: React.FC<Props> = ({ navigation, route }) => {
             ? ['Pré-CPRE', 'Resultado Pré', 'Pós-CPRE', 'Resultado Final']
             : ['Pré-CPRE', 'Resultado Final']
         }
-      />
+      /> */}
 
       <ScrollView
         style={styles.scrollView}
@@ -45,36 +45,10 @@ const PreResultScreen: React.FC<Props> = ({ navigation, route }) => {
         <ResultCard
           riskLevel={result.riskLevel}
           treatment={result.treatment}
-          title="Resultado da Avaliação Pré-CPRE"
+          title="Indicação"
         />
 
-        {/* Card: Próximo Passo (Quando precisa continuar) */}
-        {result.shouldProceedToPost && (
-          <View style={styles.nextStepCard}>
-            <View style={styles.cardHeader}>
-              <ArrowRightCircle color={colors.primary} size={20} />
-              <Text style={styles.nextStepTitle}>Próximo Passo</Text>
-            </View>
-            <Text style={styles.nextStepText}>
-              Como o risco pré-CPRE é baixo, será necessário avaliar os fatores
-              de risco intraoperatórios após o procedimento.
-            </Text>
-          </View>
-        )}
 
-        {/* Card: Avaliação Concluída (Quando o risco já é alto) */}
-        {!result.shouldProceedToPost && (
-          <View style={styles.finalCard}>
-            <View style={styles.cardHeader}>
-              <Flag color={colors.safe} size={20} />
-              <Text style={styles.finalTitle}>Avaliação Completa</Text>
-            </View>
-            <Text style={styles.finalText}>
-              Como o risco pré-CPRE é alto, o protocolo de tratamento já está
-              definido. Não é necessário avaliar fatores pós-CPRE adicionais.
-            </Text>
-          </View>
-        )}
       </ScrollView>
 
       <View style={styles.footer}>

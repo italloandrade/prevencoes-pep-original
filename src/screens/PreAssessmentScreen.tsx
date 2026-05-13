@@ -43,11 +43,11 @@ const PreAssessmentScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Stepper
+      {/* <Stepper
         currentStep={1}
         totalSteps={2}
         labels={['Avaliação Pré-CPRE', 'Resultado']}
-      />
+      /> */}
 
       <ScrollView
         style={styles.scrollView}
@@ -55,10 +55,10 @@ const PreAssessmentScreen: React.FC<Props> = ({ navigation }) => {
         showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
-          <Text style={styles.title}>Estratificação do Risco Pré-CPRE</Text>
-          <Text style={styles.subtitle}>
+          <Text style={styles.title}>Pré-CPRE</Text>
+          {/* <Text style={styles.subtitle}>
             Responda às perguntas abaixo para avaliar o risco de pancreatite pós-CPRE
-          </Text>
+          </Text> */}
         </View>
 
         <View style={styles.questionsContainer}>
@@ -77,11 +77,6 @@ const PreAssessmentScreen: React.FC<Props> = ({ navigation }) => {
 
         <FootnoteCard references={footnoteRefs} />
 
-        <View style={styles.progressInfo}>
-          <Text style={styles.progressText}>
-            Respondidas: {Object.keys(answers).length} de {preAssessmentQuestions.length}
-          </Text>
-        </View>
       </ScrollView>
 
       <View style={styles.footer}>

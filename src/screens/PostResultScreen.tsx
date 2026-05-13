@@ -39,11 +39,11 @@ const PostResultScreen: React.FC<Props> = ({ navigation, route }) => {
 
   return (
     <View style={styles.container}>
-      <Stepper
+      {/* <Stepper
         currentStep={4}
         totalSteps={4}
         labels={['Pré-CPRE', 'Resultado Pré', 'Pós-CPRE', 'Resultado Final']}
-      />
+      /> */}
 
       <ScrollView
         style={styles.scrollView}
@@ -67,38 +67,6 @@ const PostResultScreen: React.FC<Props> = ({ navigation, route }) => {
           <Text style={styles.summaryText}>{riskInfo.message}</Text>
         </View>
 
-        {/* Card de Conclusão */}
-        <View style={styles.completedCard}>
-          <View style={styles.cardHeader}>
-            <Flag color={colors.primary} size={20} />
-            <Text style={styles.completedTitle}>Avaliação Completa</Text>
-          </View>
-          
-          <Text style={styles.completedText}>
-            A estratificação de risco foi finalizada. O protocolo de tratamento
-            acima deve ser seguido rigorosamente conforme as diretrizes clínicas.
-          </Text>
-
-          {/* Box de Lembretes */}
-          <View style={styles.reminderBox}>
-            <View style={styles.reminderHeader}>
-              <Bell color={colors.primary} size={16} />
-              <Text style={styles.reminderTitle}>Lembretes Clínicos:</Text>
-            </View>
-            
-            <View style={styles.reminderList}>
-              <Text style={styles.reminderText}>
-                • Monitorar sinais de pancreatite pós-CPRE nas primeiras 24h
-              </Text>
-              <Text style={styles.reminderText}>
-                • Atentar para dor abdominal, náuseas, vômitos ou elevação de enzimas
-              </Text>
-              <Text style={styles.reminderText}>
-                • Seguir protocolos institucionais de acompanhamento pós-procedimento
-              </Text>
-            </View>
-          </View>
-        </View>
       </ScrollView>
 
       <View style={styles.footer}>
