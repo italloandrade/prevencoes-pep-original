@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(npm info *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npm test *)",
+      "PowerShell(npx expo start --help)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(npx expo start --tunnel)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(npx expo start --localhost)",
+      "PowerShell(npx expo start)",
+      "PowerShell(npx create-expo-app@latest --version)",
+      "PowerShell(npx expo install --fix)",
+      "PowerShell(npx create-expo-app@latest --template)",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(npx expo install @expo-google-fonts/geist-mono @expo-google-fonts/plus-jakarta-sans @react-native-async-storage/async-storage @react-navigation/native @react-navigation/native-stack react-native-safe-area-context react-native-screens zustand expo-font expo-splash-screen)",
+      "PowerShell(npx expo start --port 8082)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(netstat *)",
+      "PowerShell(npx expo start --tunnel --port 8082)",
+      "PowerShell(npx expo start --lan)",
+      "PowerShell(npm ls *)"
+    ]
+  }
+}
