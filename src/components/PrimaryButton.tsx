@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Text, StyleSheet, ActivityIndicator, Animated, Pressable } from 'react-native';
+import { Text, StyleSheet, ActivityIndicator, Animated, Pressable, StyleProp, ViewStyle } from 'react-native';
 import { colors, typography, spacing, borderRadius, shadows } from '../theme/tokens';
 
 interface PrimaryButtonProps {
@@ -8,6 +8,7 @@ interface PrimaryButtonProps {
   disabled?: boolean;
   loading?: boolean;
   variant?: 'primary' | 'safe' | 'alert';
+  style?: StyleProp<ViewStyle>;
 }
 
 export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
@@ -16,6 +17,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   disabled = false,
   loading = false,
   variant = 'primary',
+  style,
 }) => {
   // Controle da animação de escala (zoom)
   const scale = useRef(new Animated.Value(1)).current;
@@ -57,6 +59,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
         style={[
           styles.button,
           { backgroundColor: getBackgroundColor() },
+          style,
           disabled && styles.buttonDisabled, // Aplica estilo extra se desativado
         ]}
         onPressIn={animatePressIn}
