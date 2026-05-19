@@ -75,7 +75,7 @@ const PreResultScreen: React.FC<Props> = ({ navigation, route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.surface, // Fundo branco padrão
+    backgroundColor: colors.surface, // Fundo branco padrão,
   },
   scrollView: {
     flex: 1,
